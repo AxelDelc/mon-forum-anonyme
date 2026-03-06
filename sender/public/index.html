@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Forum Anonyme - Écrire un message</title>
+    <link rel="stylesheet" href="sender.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1> Écrire un message</h1>
+
+        <div class="formulaire">
+
+            <div class="champ">
+                <label for="pseudonyme">Pseudonyme</label>
+                <input type="text" id="pseudonyme" placeholder="Ton pseudonyme..." maxlength="50" />
+            </div>
+
+            <div class="champ">
+                <label for="contenu">Message</label>
+                <textarea id="contenu" placeholder="Ton message..." rows="5"></textarea>
+            </div>
+
+            <button id="envoyer">Envoyer</button>
+
+            <p id="message-retour"></p>
+
+        </div>
+    </div>
+
+    <script src="sender.js"></script>
+</body>
+
+</html>
