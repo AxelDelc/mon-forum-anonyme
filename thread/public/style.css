@@ -1,0 +1,59 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: Arial, sans-serif;
+     background: #f0f2f5;
+     padding: 20px;
+ }
+
+ h1 {
+     text-align: center;
+     margin-bottom: 30px;
+     color: #333;
+ }
+
+ #messages-container {
+     max-width: 700px;
+     margin: 0 auto;
+ }
+
+ .message {
+     background: white;
+     border-radius: 8px;
+     padding: 15px 20px;
+     margin-bottom: 15px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+ .pseudo {
+     font-weight: bold;
+     color: #4a90e2;
+     margin-bottom: 8px;
+ }
+
+ .contenu {
+     color: #333;
+     line-height: 1.5;
+     margin-bottom: 8px;
+ }
+
+ .date {
+     font-size: 12px;
+     color: #999;
+ }
+
+ .empty {
+     text-align: center;
+     color: #999;
+     margin-top: 50px;
+ }
+
+ .erreur {
+     text-align: center;
+     color: red;
+     margin-top: 50px;
+ }
