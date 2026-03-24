@@ -25,6 +25,7 @@ async function chargerMessages() {
 
 // Charge les messages au démarrage
 chargerMessages();
+console.log('Messages chargés.');
 
 // Rafraîchit toutes les 10 secondes
 setInterval(chargerMessages, 10000);
