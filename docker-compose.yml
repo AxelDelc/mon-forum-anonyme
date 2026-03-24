@@ -11,6 +11,7 @@ services:
       - db-data:/var/lib/postgresql/data
     networks:
       - db-network
+    restart: unless-stopped
     
 
   # API
@@ -27,6 +28,15 @@ services:
       - db-network
     depends_on:
       - db
+    restart: unless-stopped
+
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./api
+          target: /app
+          ignore:
+            - node_modules/
     
 
   # Thread - affichage des messages
@@ -41,7 +51,14 @@ services:
       - app-network
     depends_on:
       - api
-    
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./thread
+          target: /app
+          ignore:
+            - node_modules/
 
   # Sender - envoi des messages
   sender:
@@ -55,6 +72,14 @@ services:
       - app-network
     depends_on:
       - api
+    restart: unless-stopped
+    develop:
+      watch:
+        - action: sync+restart
+          path: ./sender
+          target: /app
+          ignore:
+            - node_modules/
     
 
 # Réseaux

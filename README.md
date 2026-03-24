@@ -39,7 +39,7 @@ Internet
 
 Cloner le dépôt :
 ```bash
-git clone <url-du-repo>
+git clone https://github.com/AxelDelc/mon-forum-anonyme
 cd mon-forum-anonyme
 ```
 
@@ -63,22 +63,13 @@ docker compose down
 docker compose down -v
 ```
 
-> L'option `-v` supprime le volume de la base de données. Tous les messages seront perdus.
-
-## 📡 API
+## API
 
 | Méthode | Route        | Description               |
 |---------|--------------|---------------------------|
 | GET     | `/messages`  | Récupère tous les messages |
 | POST    | `/messages`  | Crée un nouveau message    |
 
-### Exemple de requête POST
-```json
-{
-  "pseudonyme": "Anonyme",
-  "contenu": "Bonjour le forum !"
-}
-```
 
 ## Réseaux Docker
 

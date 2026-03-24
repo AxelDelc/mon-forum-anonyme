@@ -28,7 +28,7 @@ async function initDB() {
     console.log('Table messages prête');
 }
 
-// GET /messages → récupérer tous les messages
+// GET /messages pour récupérer tous les messages
 app.get('/messages', async (req, res) => {
     try {
         const result = await pool.query(
@@ -41,7 +41,7 @@ app.get('/messages', async (req, res) => {
     }
 });
 
-// POST /messages → créer un message
+// POST /messages pour créer un message
 app.post('/messages', async (req, res) => {
     const { pseudonyme, contenu } = req.body;
 
